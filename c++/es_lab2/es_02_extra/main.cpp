@@ -4,13 +4,18 @@
 #define FIRST_STAKE_IDX 1
 #define LAST_STAKE_IDX 3
 
-void hanoi(int n, int from, int to) {
+int hanoi(int n, int from, int to) {
     //Used in the recursive call (1 rec call -> to = tmp; 2 rec call -> from = tmp)
     int tmp = 0;
+    //Used to count the hanoi function calls
+    static int calls = 0;
+
+    //Increasing calls
+    calls++;
 
     //Base case (no more disk to move)
     if(n == 0) {
-        return;
+        return calls;
     }
 
     /*
@@ -31,11 +36,15 @@ void hanoi(int n, int from, int to) {
 
     //Recursive callings (tmp as the next from)
     hanoi(n - 1, tmp, to);
+
+    return calls;
 }
 
 int main() {
     //Number of disks
     int n = 0;
+    //Number of hanoi function calls
+    int calls = 0;
 
     //Getting the n from the user
     std::cout << "Enter the number of disks to move: ";
@@ -45,7 +54,9 @@ int main() {
         //Printing the moves
         std::cout << "Minimum number of moves:\n\n";
 
-        hanoi(n, FIRST_STAKE_IDX, LAST_STAKE_IDX);
+        calls = hanoi(n, FIRST_STAKE_IDX, LAST_STAKE_IDX);
+
+        std::cout << "\n\nFunction calls: " << calls << "\n";
     } else {
         //Printing error
         std::cout << "\nEnter a number greater than 0!" << std::endl;
