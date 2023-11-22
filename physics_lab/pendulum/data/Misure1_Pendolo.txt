@@ -2,7 +2,7 @@
 Studente: Nicolo' Maffi       
 -----------------------------------------------
 LT in Fisica, A.A. 2023/2024 - Esperimentazioni 1 (corso B)
-Esperimento n.1: Misure ripetute del periodo di un pendolo        
+Esperimento n.1a: 100 misure ripetute del periodo 1 di un pendolo        
 Data: 18 novembre 2023
 
 -----------------------------------------------
