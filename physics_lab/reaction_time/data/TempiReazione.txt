@@ -6,7 +6,7 @@ Esperimento extra: 50 misure ripetute del tempo di reazione
 Data: 29 novembre 2023
 
 -----------------------------------------------
-Punto    Tempo
+Punto    Tempo (ms)
 -----------------------------------------------
    1      204
    2      193
